@@ -1,6 +1,10 @@
-# SnapTidy 🗂
+<p align="center">
+  <img src="./public/logo.svg" width="64" height="64" alt="SnapTidy Logo" />
+</p>
 
-<p animal-align="center">
+<h1 align="center">SnapTidy</h1>
+
+<p align="center">
   <strong>Declutter your screenshot folder in minutes. 100% local, private, and ultra-fast.</strong>
 </p>
 
@@ -10,12 +14,6 @@
   <a href="#-privacy-first-architecture"><strong>Privacy Note</strong></a> &middot;
   <a href="#-license"><strong>MIT License</strong></a>
 </p>
-
----
-
-## ⚡ SnapTidy in Action
-
-![SnapTidy Demo](./src/assets/hero.png)
 
 ---
 
