@@ -1,26 +1,51 @@
 # SnapTidy 🗂
 
-> Stop hoarding screenshots. Point it at a folder. Swipe through thousands of screenshots in minutes. Nothing ever leaves your device.
+<p animal-align="center">
+  <strong>Declutter your screenshot folder in minutes. 100% local, private, and ultra-fast.</strong>
+</p>
 
-SnapTidy is a modern, developer-focused local image decluttering tool built with React, TypeScript, Tailwind CSS, and the native **File System Access API**.
+<p align="center">
+  <a href="https://harsha-pyla.github.io/SnapTidy/"><strong>Live Demo</strong></a> &middot;
+  <a href="#-getting-started"><strong>Run Locally</strong></a> &middot;
+  <a href="#-privacy-first-architecture"><strong>Privacy Note</strong></a> &middot;
+  <a href="#-license"><strong>MIT License</strong></a>
+</p>
 
 ---
 
-## ⚡ Features
+## ⚡ SnapTidy in Action
 
-- **100% Local & Private**: Operates directly in your browser. Files are read and deleted locally via native File System Access API handles. Zero uploads, zero analytics, zero network calls.
-- **Swipe Review Workspace**: Interactive physical card deck powered by Framer Motion gestures (`← delete`, `→ keep`, `↑ maybe`).
-- **Keyboard Shortcuts**:
-  - `[←]` Mark for deletion
+![SnapTidy Demo](./src/assets/hero.png)
+
+---
+
+## 💡 What SnapTidy Does
+
+SnapTidy is a rapid image decluttering web application designed to help developers, designers, and power users organize overflowing screenshot directories. By presenting your local files in an intuitive swipe-review workspace with keyboard shortcuts, you can process thousands of clutter items in minutes.
+
+### Key Features
+- 📇 **Physical Deck Swipe Workspace**: Smooth drag-and-drop card gestures powered by Framer Motion (`← delete`, `→ keep`, `↑ maybe`).
+- ⌨️ **Keyboard Navigation**:
+  - `[←]` Mark item for deletion
   - `[→]` Keep photo
-  - `[↑]` Move to Maybe pile
+  - `[↑]` Move item to Maybe pile
   - `[Z]` Undo last decision
   - `[ESC]` Pause review session
-- **Instant Memory Filtering**: 60fps minimum file size slider and category toggles (`Screenshots`, `Photos`, `All images`).
-- **Maybe Pile Workspace**: Revisit undecided photos anytime or bulk-return them to Keep.
-- **2-Step Safe Deletion**: Running storage total with inline confirmation. Tapping `×` on any thumbnail briefly flashes green to return it to Kept.
-- **Shareable Canvas Card**: Client-side 1200x630 HTML5 Canvas badge generator for storage freed stats.
-- **Appearance Themes**: Toggle between **Default Dark** (`#0B0B0F`), **OLED Pure Black** (`#000000`), and **Clean Light** (`#F4F4F8`) with automatic `localStorage` persistence.
+- ⚡ **Instant Client Filtering**: Smooth 60fps minimum size slider and category toggles (`Screenshots`, `Photos`, `All`).
+- 🛡️ **Safety-Net Deletion Review**: Confirm deletions with a 2-step summary grid. Hovering or clicking `×` flashes keep-accent green to un-mark items.
+- 🎨 **Appearance Themes**: Toggle between **Default Dark** (`#0B0B0F`), **OLED Pure Black** (`#000000`), and **Clean Light** (`#F4F4F8`) with automatic `localStorage` persistence.
+- 📊 **Shareable Summary Card**: Generate client-side HTML5 Canvas storage freed badges with 1-click download or clipboard copy.
+
+---
+
+## 🔒 Privacy-First Architecture
+
+SnapTidy operates strictly under a **local-first architecture**:
+
+- 📂 **Native File System Access API**: Uses your browser's native `showDirectoryPicker` to read and delete files locally on your machine.
+- 🚫 **Zero Uploads**: No image data, filenames, or folder paths ever leave your browser memory.
+- 🛑 **Zero Telemetry**: No analytics scripts, no tracking cookies, and zero external API calls.
+- 💾 **Local Progress Persistence**: Progress state is cached strictly inside your browser's IndexedDB so you can safely resume sessions after page refreshes.
 
 ---
 
@@ -28,22 +53,30 @@ SnapTidy is a modern, developer-focused local image decluttering tool built with
 
 ### Prerequisites
 - Node.js 18+ and `npm`
-- Google Chrome or Microsoft Edge (for native `showDirectoryPicker` File System Access API support)
+- Google Chrome, Microsoft Edge, or Opera (browsers supporting the native [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API))
 
-### Installation
+### Run Locally
 
-```bash
-git clone https://github.com/harsha-pyla/SnapTidy.git
-cd SnapTidy
-npm install
-npm run dev
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/harsha-pyla/SnapTidy.git
+   cd SnapTidy
+   ```
 
-### Building for Production
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run build
-```
+3. **Start local development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build production bundle**:
+   ```bash
+   npm run build
+   ```
 
 ---
 
