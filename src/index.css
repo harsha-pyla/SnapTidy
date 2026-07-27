@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* ——— Color tokens (exact spec) ——— */
+  --color-bg:          #0B0B0F;
+  --color-surface:     #14141B;
+  --color-border:      #232330;
+  --color-text:        #F4F4F6;
+  --color-text-secondary: #8B8B99;
+  --color-accent:      #6E56CF;
+  --color-success:     #3DD68C;
+  --color-danger:      #F2555A;
+
+  /* ——— Font stacks ——— */
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+}
+
+/* ——— Base reset ——— */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* ——— Focus states ——— */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ——— Scrollbar ——— */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
